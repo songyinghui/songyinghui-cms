@@ -62,7 +62,15 @@
 		</div>
 		<textarea name="content1" cols="100" rows="8"
 			style="width: 1000px; height: 200px; visibility: hidden;"><%=htmlspecialchars(htmlData)%></textarea>
-		<br /> <input type="button" class="btn btn-primary"
+		<br /> 
+		<div class="form-group form-inline">
+		<label for="title">关键字:</label> <input type='text' name="keywords"
+				class="form-control form-control-sm" style="width: 300px">
+		
+		<label for="title">文章来源:</label> <input type='text' name="origin"
+				class="form-control form-control-sm" style="width: 300px">
+		</div>
+		<input type="button" class="btn btn-primary"
 			onclick="publish()" value="发布文章" /> (提交快捷键: Ctrl + Enter)
 	</form>
 </body>

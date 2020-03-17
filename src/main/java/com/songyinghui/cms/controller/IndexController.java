@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -119,6 +120,13 @@ public class IndexController {
 	@ResponseBody
 	public boolean deleteCollect(Integer id) {
 		return collectService.deleteCollect(id)>0;
+	}
+	@RequestMapping("updateHit")
+	@ResponseBody
+	public boolean updateHit(Integer id) {
+		
+		return articleService.updateHit(id);
+		
 	}
 	
 }

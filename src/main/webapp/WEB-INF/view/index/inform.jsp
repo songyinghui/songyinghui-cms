@@ -13,6 +13,7 @@
 	href="/resource/bootstrap.min.css" />
 <script type="text/javascript" src="/resource/jquery-3.2.1.js"></script>
 <script type="text/javascript" src="/resource/bootstrap.min.js"></script>
+<meta name="keywords" content="${article.keywords }">
 
 </head>
 <body>
@@ -27,6 +28,7 @@
 			<div class='col-md-1'></div>
 			<div class='col-md-7'>
 				<h2>${article.title }</h2>
+				<p>文章来源:${article.origin }</p>
 				<p>${article.user.username}
 					<fmt:formatDate value="${article.created}"
 						pattern="yyyy-MM-dd HH:mm:ss" />
@@ -80,6 +82,16 @@
 
 	</div>
 </body>
+<script type="text/javascript">
+     $.ajax({
+    	 url:"/updateHit?id=${article.id}",
+    	 success:function(flag){
+    		 if(flag){
+    			 alert(hit+1)
+    		 }
+    	 }
+     })
+</script>
 <script type="text/javascript">
 	function addComment() {
 		var articleId = '${article.id}';

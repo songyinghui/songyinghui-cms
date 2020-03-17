@@ -24,4 +24,6 @@ public interface ArticleDao {
 	void updateCommentNum(Integer articleId);
 
 	List<Article> selectsByCommentNum();
+
+	boolean updateHit(Integer id);
 }

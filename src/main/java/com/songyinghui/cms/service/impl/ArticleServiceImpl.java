@@ -54,8 +54,11 @@ public class ArticleServiceImpl implements ArticleService {
 		List<Article> list=dao.selectsByCommentNum();
 		return new PageInfo<Article>(list);
 	}
-	
-
+	@Override
+	public boolean updateHit(Integer id) {
+		// TODO Auto-generated method stub
+		return dao.updateHit(id);
+	}
 
 	
 

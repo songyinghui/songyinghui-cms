@@ -26,4 +26,6 @@ public interface ArticleService {
 	void updateCommentNum(Integer articleId);
 
 	PageInfo<Article> selects(int i, int j);
+
+	boolean updateHit(Integer id);
 }

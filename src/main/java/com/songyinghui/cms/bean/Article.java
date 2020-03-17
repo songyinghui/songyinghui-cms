@@ -35,6 +35,25 @@ public class Article implements Serializable {
 	private Category category;
 	private User user;
 	private Integer commentNum;
+    
+	private String keywords;//关键字
+	private String origin;//文章来源
+	
+	public String getKeywords() {
+		return keywords;
+	}
+
+	public void setKeywords(String keywords) {
+		this.keywords = keywords;
+	}
+
+	public String getOrigin() {
+		return origin;
+	}
+
+	public void setOrigin(String origin) {
+		this.origin = origin;
+	}
 
 	public Integer getCommentNum() {
 		return commentNum;
